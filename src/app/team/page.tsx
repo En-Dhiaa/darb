@@ -45,7 +45,7 @@ export default function TeamPage() {
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                 <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden bg-charcoal-900 border-2 border-sand/40 flex-shrink-0 shadow-card">
                   <Image
-                    src={idx === 0 ? "/images/team-dhiaa.webp" : "/images/team-abdulrahman.svg"}
+                    src={idx === 0 ? "/images/team-dhiaa.webp" : "/images/team-abdulrahman.webp"}
                     alt={lang === "ar" ? member.nameAr : member.nameEn}
                     fill
                     className="object-cover object-top"

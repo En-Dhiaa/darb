@@ -209,7 +209,7 @@ export default function HomePage() {
                 <div className="flex items-center gap-5">
                   <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-charcoal-800 border-2 border-sand/40 flex-shrink-0">
                     <Image
-                      src={idx === 0 ? "/images/team-dhiaa.webp" : "/images/team-abdulrahman.svg"}
+                      src={idx === 0 ? "/images/team-dhiaa.webp" : "/images/team-abdulrahman.webp"}
                       alt={lang === "ar" ? member.nameAr : member.nameEn}
                       fill
                       className="object-cover object-top"

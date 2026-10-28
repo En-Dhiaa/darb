@@ -9,6 +9,7 @@ import { campaignsData } from "@/config/campaigns";
 import { StoryboardTimeline } from "@/components/ui/StoryboardTimeline";
 import { DeliverableGrid } from "@/components/campaigns/DeliverableGrid";
 import { ProposalNotice } from "@/components/ui/ProposalNotice";
+import { VehicleExpeditionGallery } from "@/components/campaigns/VehicleExpeditionGallery";
 import {
   Compass,
   ArrowUpRight,
@@ -223,6 +224,11 @@ export default function NatcoJetourCampaignPage() {
         <div className="pt-4">
           <StoryboardTimeline stages={campaign.storyboard} />
         </div>
+      </section>
+
+      {/* DYNAMIC VEHICLE EXPEDITION REEL / GALLERY */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <VehicleExpeditionGallery />
       </section>
 
       {/* SECTION E — PRODUCT STORYTELLING & SPECIFICATION SYSTEM */}
