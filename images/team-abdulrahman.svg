@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgHabbash" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A1F23"/>
+      <stop offset="60%" stop-color="#14181B"/>
+      <stop offset="100%" stop-color="#0E1113"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="750" fill="url(#bgHabbash)"/>
+  
+  <!-- Subtle Route Map Pattern in Background -->
+  <g opacity="0.15" stroke="#C8B99D" stroke-width="1.2" fill="none">
+    <path d="M50,100 C150,200 120,350 250,420 S450,500 550,650"/>
+    <circle cx="250" cy="420" r="6" fill="#C8B99D"/>
+    <circle cx="550" cy="650" r="6" fill="#535B48"/>
+  </g>
+
+  <!-- Editorial Portrait Silhouette & Expedition Iconography -->
+  <g transform="translate(180, 200)">
+    <circle cx="120" cy="120" r="100" fill="#242A2E" stroke="#C8B99D" stroke-width="2" stroke-opacity="0.4"/>
+    <!-- Driver / Steering Wheel Emblem -->
+    <circle cx="120" cy="120" r="65" fill="none" stroke="#C8B99D" stroke-width="6"/>
+    <line x1="55" y1="120" x2="185" y2="120" stroke="#C8B99D" stroke-width="5"/>
+    <line x1="120" y1="120" x2="120" y2="185" stroke="#C8B99D" stroke-width="5"/>
+    <circle cx="120" cy="120" r="18" fill="#535B48"/>
+  </g>
+
+  <g transform="translate(60, 560)">
+    <rect x="0" y="0" width="480" height="120" rx="8" fill="#101315" stroke="#C8B99D" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="240" y="45" font-family="'Cairo', sans-serif" font-weight="800" font-size="22" fill="#F5F3EE" text-anchor="middle">عبدالرحمن علي هباش</text>
+    <text x="240" y="75" font-family="'Cairo', sans-serif" font-weight="500" font-size="13" fill="#C8B99D" text-anchor="middle">سائق محترف • قائد الرحلات وتخطيط المسارات</text>
+    <text x="240" y="98" font-family="'Manrope', sans-serif" font-weight="500" font-size="11" fill="#8E9590" text-anchor="middle">Professional Driver &amp; Journey Leader</text>
+  </g>
+</svg>
+
