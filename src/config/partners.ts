@@ -1,0 +1,329 @@
+export interface PartnershipModel {
+  id: string;
+  category: "journey" | "role" | "in-kind";
+  titleAr: string;
+  titleEn: string;
+  badgeAr: string;
+  badgeEn: string;
+  descAr: string;
+  descEn: string;
+  idealForAr: string;
+  idealForEn: string;
+  keyAspectsAr: string[];
+  keyAspectsEn: string[];
+}
+
+export interface PricingFactor {
+  titleAr: string;
+  titleEn: string;
+  descAr: string;
+  descEn: string;
+  iconName: string;
+}
+
+export const partnershipModels: PartnershipModel[] = [
+  {
+    id: "pilot-journey",
+    category: "journey",
+    titleAr: "الرحلة التجريبية (Pilot Journey)",
+    titleEn: "Pilot Brand Expedition",
+    badgeAr: "بداية مدروسة",
+    badgeEn: "Entry Engagement",
+    descAr: "حملة ميدانية استكشافية قصيرة المدى تختبر تفاعل الجمهور مع منتج أو خدمة محددة ضمن مسار جغرافي واحد ووثائقي مركّز.",
+    descEn: "A focused, single-destination exploratory campaign testing audience resonance around a specific vehicle, product, or service.",
+    idealForAr: "الشركات التي ترغب في تجربة أسلوب السرد الوثائقي الميداني قبل الالتزام ببرامج طويلة.",
+    idealForEn: "Enterprises seeking to validate field documentary storytelling before committing to multi-stage programs.",
+    keyAspectsAr: [
+      "مسار جغرافي واحد محدد بعناية",
+      "فيلم وثائقي رئيسي + 3 مقاطع عمودية",
+      "معرض صور تحريرية عالي الجودة",
+      "تقرير أداء بعد الحملة",
+    ],
+    keyAspectsEn: [
+      "One meticulously scouted route",
+      "1 Core Master Film + 3 Vertical Reels",
+      "Curated editorial photo gallery",
+      "Post-campaign performance analytics",
+    ],
+  },
+  {
+    id: "monthly-partner",
+    category: "journey",
+    titleAr: "شريك شهري للعلامة (Monthly Brand Partner)",
+    titleEn: "Monthly Brand Partner",
+    badgeAr: "حضور مستمر",
+    badgeEn: "Sustained Presence",
+    descAr: "برنامج إنتاج شهري يتضمن رحلتين إلى ثلاث رحلات ميدانية لتوثيق جوانب متعددة من نشاط الشركة أو أداء منتجاتها في مختلف الظروف.",
+    descEn: "A structured monthly production cadence covering 2-3 field journeys to document multifaceted product capabilities across diverse settings.",
+    idealForAr: "العلامات التي تطلق حملات موسمية أو تمتلك خطوط منتجات متعددة ترغب في تنشيط مبيعاتها.",
+    idealForEn: "Brands launching seasonal campaigns or managing multiple product lines requiring sustained digital visibility.",
+    keyAspectsAr: [
+      "رحلتان ميدانيتان خلال الشهر",
+      "حزمة متجددة من المقاطع الأسبوعية",
+      "تغطيات حية وخلف الكواليس",
+      "حقوق استخدام الأصول في الإعلانات الممولة",
+    ],
+    keyAspectsEn: [
+      "2 Field journeys within 30 days",
+      "Weekly rotating high-impact video reels",
+      "Behind-the-scenes live vignettes",
+      "Commercial licensing for sponsored digital ads",
+    ],
+  },
+  {
+    id: "annual-partner",
+    category: "journey",
+    titleAr: "شريك سنوي استراتيجي (Annual Brand Partner)",
+    titleEn: "Annual Strategic Brand Partner",
+    badgeAr: "شراكة استراتيجية",
+    badgeEn: "Flagship Alliance",
+    descAr: "شراكة سنوية كاملة ترافق فيها علامة الشريك كافة رحلات درب الاستكشافية على مدار العام عبر مختلف المحافظات والمواسم.",
+    descEn: "A comprehensive annual partnership integrating the sponsor's brand across all DARB expeditions across all seasons and regions.",
+    idealForAr: "كبرى الشركات والمؤسسات التي تبحث عن قيادة السرد الإعلاني الميداني وحضور مستدام عالي المصداقية.",
+    idealForEn: "Major enterprises seeking premier leadership in documentary media with enduring top-of-mind brand equity.",
+    keyAspectsAr: [
+      "مرافقة دائمة لعلامة الشريك في كافة الرحلات",
+      "سلسلة أفلام وثائقية متكاملة على مدار العام",
+      "أولوية مطلقة في الظهور والتسمية في المواد",
+      "تنسيق مسبق للمسارات بما يخدم أهداف الشريك التجارية",
+    ],
+    keyAspectsEn: [
+      "Permanent brand presence across all expedition seasons",
+      "Year-round episodic documentary series",
+      "Top-tier naming and title sponsorship credit",
+      "Collaborative route design aligned with corporate priorities",
+    ],
+  },
+  {
+    id: "regional-coverage",
+    category: "journey",
+    titleAr: "التغطية المناطقية المتخصصة (Regional Coverage)",
+    titleEn: "Specialized Regional Coverage",
+    badgeAr: "استهداف جغرافي",
+    badgeEn: "Geographic Target",
+    descAr: "رحلة ميدانية تركز على محافظة أو قطاع جغرافي بعينه لإبراز شبكة فروع الشركة ومنافذ بيعها وخدمتها للمجتمعات المحلية.",
+    descEn: "An expedition focused on a specific province or geographic corridor highlighting local branch networks and community outreach.",
+    idealForAr: "البنوك، شركات الاتصالات، سلاسل التجزئة، وشبكات الصرافة والخدمات اللوجستية.",
+    idealForEn: "Banks, telecom operators, retail chains, and logistics networks with strong regional branch presence.",
+    keyAspectsAr: [
+      "تركيز جغرافي على محافظات ومراكز محددة",
+      "توثيق قصص محلية مع سكان ورواد الفروع",
+      "إبراز سهولة الوصول إلى خدمات الشركة",
+      "محتوى موجه لجمهور تلك المناطق",
+    ],
+    keyAspectsEn: [
+      "Strict geographic focus on target governorates",
+      "Documenting local customer and community stories",
+      "Demonstrating service accessibility in varied terrains",
+      "Hyper-localized audience targeting",
+    ],
+  },
+  {
+    id: "product-experience",
+    category: "journey",
+    titleAr: "تجربة المنتج الميدانية (Product Experience)",
+    titleEn: "Field Product Experience",
+    badgeAr: "برهان عملي",
+    badgeEn: "Real Demonstration",
+    descAr: "وضع منتج أو أداة أو معدة تقنية في تجربة استخدام فعلية وشاقة أثناء الرحلة لتسجيل كفاءتها وموثوقيتها بشكل وثائقي.",
+    descEn: "Subjecting equipment, gear, or tools to rigorous real-world field conditions, documenting durability and engineering value.",
+    idealForAr: "معدات التخييم، الإلكترونيات المقاومة للصدمات، الإطارات، الزيوت، وحلول الطاقة الشمسية والمحمولة.",
+    idealForEn: "Camping equipment, rugged electronics, tires, lubricants, outdoor gear, and portable energy solutions.",
+    keyAspectsAr: [
+      "اختبار حقيقي خالي من الادعاءات المصطنعة",
+      "بيان المزايا والعيوب بموضوعية تبني ثقة المشتري",
+      "لقطات مقربة دقيقة للقطع أثناء العمل",
+      "أصول بصرية مخصصة لمتاجر الشريك الإلكترونية",
+    ],
+    keyAspectsEn: [
+      "Objective, unscripted field stress test",
+      "Balanced, credible reporting building buyer trust",
+      "High-definition macro detail of product under load",
+      "E-commerce ready video cuts and product stills",
+    ],
+  },
+  {
+    id: "main-sponsor",
+    category: "role",
+    titleAr: "الراعي الرئيسي (Main Sponsor)",
+    titleEn: "Title / Main Sponsor",
+    badgeAr: "الصدارة",
+    badgeEn: "Lead Sponsor",
+    descAr: "الجهة التي تتصدر هوية الحملة أو الرحلة، مع دمج قصتها في افتتاحية وختام كافة المقاطع والأفلام المنشورة.",
+    descEn: "The headline brand presenting the expedition, integrated into the opening, core narrative, and closing credits of all releases.",
+    idealForAr: "الشركات القيادية الراغبة في تصدر المشهد الإعلامي الميداني.",
+    idealForEn: "Industry leaders seeking prominent, exclusive branding authority.",
+    keyAspectsAr: [
+      "ظهور شعار الشريك كراعٍ رئيسي للعمل",
+      "إشارة صوتية ونصية في بداية وخاتمة كل فيلم",
+      "تضمين روابط الشريك في كافة المنشورات الرسمية",
+    ],
+    keyAspectsEn: [
+      "Title sponsorship logo placement on all campaign graphics",
+      "Verbal and textual presenter credit on every video",
+      "Dedicated corporate links in all official social captions",
+    ],
+  },
+  {
+    id: "supporting-sponsor",
+    category: "role",
+    titleAr: "راعي مشارك وداعم (Supporting Sponsor)",
+    titleEn: "Supporting Partner",
+    badgeAr: "رعاية فرعية",
+    badgeEn: "Associate Sponsor",
+    descAr: "مشاركة مرنة بجانب الراعي الرئيسي لتأكيد حضور العلامة والوصول إلى شريحة جديدة من الجمهور دون تحمل كامل أعباء الإنتاج.",
+    descEn: "Flexible co-sponsorship alongside the main presenter, providing solid exposure and reaching target audiences efficiently.",
+    idealForAr: "الشركات المتوسطة أو العلامات التابعة التي ترغب في حضور موثوق ومدروس التكلفة.",
+    idealForEn: "Growing enterprises or brand subsidiaries wanting cost-effective documentary positioning.",
+    keyAspectsAr: [
+      "ظهور الشعار في شارة الرعاة في نهاية الأفلام",
+      "مقطع مخصص ضمن الحملة يركز على خدمة الشريك",
+      "تضمين وسم وشكر الشريك في المنشورات",
+    ],
+    keyAspectsEn: [
+      "Logo inclusion in sponsor credits sequence",
+      "1 Dedicated spotlight vignette for the sponsor's service",
+      "Social media mention and brand tag across releases",
+    ],
+  },
+  {
+    id: "mobility-partner",
+    category: "in-kind",
+    titleAr: "شريك النقل والتنقل (Mobility Partner)",
+    titleEn: "Official Mobility Partner",
+    badgeAr: "رعاية عينية / أسطول",
+    badgeEn: "Fleet Sponsorship",
+    descAr: "توفير مركبات الدفع الرباعي أو سيارات الرحلة التي تنقل الفريق ومعداته، مع توثيق أداء المركبة طوال المسار (مثل مقترح ناتكو جيتور).",
+    descEn: "Providing expedition vehicles to transport crew and cinema gear, documenting performance continuously along the road.",
+    idealForAr: "وكلاء وموزعو السيارات، شركات تأجير السيارات، وشركات الدفع الرباعي والمعدات.",
+    idealForEn: "Automotive dealerships, vehicle rental fleets, and off-road mobility providers.",
+    keyAspectsAr: [
+      "ظهور السيارة كبطل أساسي في المشاهد الميدانية",
+      "توثيق تفاصيل الراحة والقيادة على الطرق",
+      "محتوى خاص لمراكز بيع وخدمات الوكيل",
+    ],
+    keyAspectsEn: [
+      "Vehicle featured as central traveling companion in landscape shots",
+      "Authentic documentation of driving dynamics and highway comfort",
+      "Dedicated marketing assets for showroom displays",
+    ],
+  },
+  {
+    id: "fuel-energy-partner",
+    category: "in-kind",
+    titleAr: "شريك الوقود ومحطات الطاقة (Fuel & Energy Partner)",
+    titleEn: "Fuel & Power Partner",
+    badgeAr: "دعم تشغيلي",
+    badgeEn: "Energy Support",
+    descAr: "تغطية احتياجات تزويد الأسطول بالوقود أو شحن المنظومات والمعدات أثناء الرحلة عبر شبكة محطات أو حلول توليد.",
+    descEn: "Powering expedition vehicles and production gear via fuel vouchers, highway stations, or solar charging systems.",
+    idealForAr: "شركات توزيع المنتجات النفطية، محطات الوقود النموذجية، وموردي محطات الشحن والطاقة المتجددة.",
+    idealForEn: "Fuel station networks, petroleum distribution firms, and renewable energy providers.",
+    keyAspectsAr: [
+      "تصوير محطات التزود النموذجية والخدمات الإضافية",
+      "إبراز انتشار المحطات على الطرق السريعة",
+      "توثيق حلول الطاقة النظيفة لشحن المعدات في المواقع النائية",
+    ],
+    keyAspectsEn: [
+      "Filming modern highway service stops and traveler amenities",
+      "Highlighting national fuel network reach along major corridors",
+      "Showcasing clean battery storage powering cameras in remote spots",
+    ],
+  },
+  {
+    id: "equipment-partner",
+    category: "in-kind",
+    titleAr: "شريك المعدات والتقنية (Equipment & Tech Partner)",
+    titleEn: "Equipment & Technical Partner",
+    badgeAr: "تجهيزات احترافية",
+    badgeEn: "Gear Collaboration",
+    descAr: "توفير كاميرات سينمائية، طائرات درون، أجهزة اتصال فضائي، أو معدات تخييم وحماية أثناء السفر الميداني.",
+    descEn: "Equipping the journey with cinema gear, drones, satellite communicators, or expedition camping setups.",
+    idealForAr: "وكلاء ومتاجر معدات التصوير، أجهزة الاتصالات، ومستلزمات الرحلات الخارجية.",
+    idealForEn: "Cinema camera distributors, satellite communication providers, and outdoor outfitters.",
+    keyAspectsAr: [
+      "بيان جودة المعدات في الظروف الميدانية الحقيقية",
+      "إشادة تقنية في كواليس الإنتاج (Behind The Scenes)",
+      "مواد استعراضية لمتاجر وقنوات الوكيل",
+    ],
+    keyAspectsEn: [
+      "Demonstrating gear durability under harsh field conditions",
+      "Technical shoutouts in behind-the-scenes production reels",
+      "Specialized showcase clips for gear retailers and platforms",
+    ],
+  },
+  {
+    id: "hospitality-partner",
+    category: "in-kind",
+    titleAr: "شريك الضيافة والإقامة (Hospitality Partner)",
+    titleEn: "Hospitality & Lodging Partner",
+    badgeAr: "إقامة وضيافة",
+    badgeEn: "Lodging Partner",
+    descAr: "استضافة طاقم العمل في الفنادق أو المنتجعات أو الاستراحات الواقعة على مسارات الرحلة وتوثيق جودة الخدمة فيها.",
+    descEn: "Hosting the production crew at hotels, boutique retreats, or waystations along the route, capturing guest hospitality.",
+    idealForAr: "الفنادق، المنتجعات السياحية، وسلاسل المطاعم والاستراحات على الطرق الرئيسية.",
+    idealForEn: "Hotels, eco-resorts, tourist rest stops, and regional culinary chains.",
+    keyAspectsAr: [
+      "توثيق مرافق الاستراحة والراحة بعد عناء الطريق",
+      "إبراز كرم الضيافة المحلية والأطباق المميزة",
+      "لقطات مريحة تبرز الموقع كوجهة للمسافرين",
+    ],
+    keyAspectsEn: [
+      "Capturing comfort, rooms, and relaxation after long highway drives",
+      "Highlighting local hospitality, safety, and authentic cuisine",
+      "Showcasing the venue as a premier stop for regional travelers",
+    ],
+  },
+];
+
+export const pricingFactors: PricingFactor[] = [
+  {
+    titleAr: "المدة الزمنية للرحلة",
+    titleEn: "Expedition Duration",
+    descAr: "عدد أيام التصوير الميداني وفترة ما بعد الإنتاج والمونتاج والتلوين المطلوب لتسليم المواد كاملة.",
+    descEn: "Total days dedicated to on-location filming, route transit, and specialized post-production color grading.",
+    iconName: "Clock",
+  },
+  {
+    titleAr: "النطاق الجغرافي والمسارات",
+    titleEn: "Geographic Scope & Route Terrain",
+    descAr: "المسافة الكلية، المحافظات المشمولة بالزيارة، وطبيعة التضاريس (جبلية، صحراوية، ساحلية) وما تتطلبه من تحضيرات خاصة.",
+    descEn: "Total distance, number of governorates traversed, and terrain profile (mountainous, coastal, desert) requiring custom logistical measures.",
+    iconName: "MapPin",
+  },
+  {
+    titleAr: "اللوجستيات وتكاليف السفر الميداني",
+    titleEn: "Field Travel & Support Logistics",
+    descAr: "نفقات تنقل الفريق، الإقامة، الوقود، تراخيص المرور، والتدابير الاحترازية لضمان سلامة الطاقم والمعدات.",
+    descEn: "Crew accommodations, travel expenses, route security assessments, permits, and contingency buffers.",
+    iconName: "Navigation",
+  },
+  {
+    titleAr: "عدد ونوع المخرجات البصرية المطلوبة",
+    titleEn: "Deliverable Volume & Formats",
+    descAr: "تحديد كمية الأفلام الوثائقية، والمقاطع الرأسية، والصور الفوتوغرافية، ومقاطع الكواليس المتفق على تسليمها.",
+    descEn: "Volume of cinema master films, vertical reels, photography counts, and documentary vignettes requested.",
+    iconName: "Layers",
+  },
+  {
+    titleAr: "تعقيد الإنتاج السينمائي والمعدات",
+    titleEn: "Production Complexity & Rigging",
+    descAr: "استخدام كاميرات سينمائية متقدمة، طائرات درون، مثبتات حركة للسيارات (Car Rigs)، أو تسجيل صوتي متعدد القنوات.",
+    descEn: "Utilization of high-end cinema sensors, drone aerial cinematography, automotive chase rigs, and multi-channel audio.",
+    iconName: "Video",
+  },
+  {
+    titleAr: "حقوق الاستخدام والتراخيص الإعلانية",
+    titleEn: "Licensing & Advertising Rights",
+    descAr: "نطاق استخدام الأصول البصرية (قنوات الشريك الرقمية، الإعلانات التلفزيونية، اللوحات الطرقية، أو الحملات الممولة).",
+    descEn: "Rights clearance across corporate channels: owned digital media, paid ads, national television, or outdoor billboards.",
+    iconName: "ShieldCheck",
+  },
+  {
+    titleAr: "مستوى الدعم العيني والتسهيلات المقدمة",
+    titleEn: "In-Kind Provisions & Faciltations",
+    descAr: "مساهمة الشريك في توفير المركبات أو الوقود أو المرافق، حيث يقلل الدعم العيني المباشر من التكلفة المالية الإجمالية.",
+    descEn: "Partner provisions of vehicles, fuel, or accommodation directly reduce gross cash production budgets.",
+    iconName: "Briefcase",
+  },
+];

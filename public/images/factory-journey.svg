@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgFac" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14181B"/>
+      <stop offset="60%" stop-color="#101315"/>
+      <stop offset="100%" stop-color="#090B0C"/>
+    </linearGradient>
+    <linearGradient id="glowOlive" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#535B48" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#C8B99D" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bgFac)"/>
+
+  <!-- Architectural Factory Grid Lines -->
+  <g opacity="0.12" stroke="#C8B99D" stroke-width="1.5">
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+    <line x1="900" y1="0" x2="900" y2="800"/>
+    <line x1="1100" y1="0" x2="1100" y2="800"/>
+    
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="350" x2="1200" y2="350"/>
+    <line x1="0" y1="550" x2="1200" y2="550"/>
+    <line x1="0" y1="750" x2="1200" y2="750"/>
+  </g>
+
+  <!-- Industrial Silhouettes & Production Line Rhythm -->
+  <polygon points="120,650 120,400 240,320 240,650" fill="#1A1F23" opacity="0.9"/>
+  <polygon points="260,650 260,370 380,300 380,650" fill="#14181B" opacity="0.9"/>
+  <polygon points="400,650 400,420 520,350 520,650" fill="#1A1F23" opacity="0.9"/>
+  
+  <!-- Conveyor & Flow Lines -->
+  <path d="M120,520 C350,480 600,560 1100,500" stroke="#C8B99D" stroke-width="3" fill="none" opacity="0.4"/>
+  <path d="M120,540 C350,500 600,580 1100,520" stroke="#535B48" stroke-width="2" fill="none" opacity="0.6"/>
+
+  <!-- Ambient Light Sphere -->
+  <circle cx="850" cy="350" r="220" fill="url(#glowOlive)" filter="blur(40px)"/>
+
+  <!-- Distribution Transit Motif -->
+  <g transform="translate(680, 430)">
+    <!-- Delivery Transport Truck Outline -->
+    <rect x="0" y="40" width="220" height="90" rx="4" fill="#1A1F24" stroke="#C8B99D" stroke-width="1.5" stroke-opacity="0.5"/>
+    <path d="M220,70 L270,70 L290,100 L290,130 L220,130 Z" fill="#242A2E" stroke="#C8B99D" stroke-width="1.5" stroke-opacity="0.5"/>
+    <circle cx="50" cy="130" r="18" fill="#0D0F11" stroke="#C8B99D" stroke-width="2" stroke-opacity="0.5"/>
+    <circle cx="180" cy="130" r="18" fill="#0D0F11" stroke="#C8B99D" stroke-width="2" stroke-opacity="0.5"/>
+    <circle cx="260" cy="130" r="18" fill="#0D0F11" stroke="#C8B99D" stroke-width="2" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Title & Typography -->
+  <text x="60" y="100" font-family="'Cairo', sans-serif" font-weight="900" font-size="28" fill="#C8B99D" letter-spacing="4">DARB INDUSTRY DOCS</text>
+  <text x="60" y="145" font-family="'Cairo', sans-serif" font-weight="800" font-size="44" fill="#F5F3EE">من المصنع إلى الناس | FROM FACTORY TO PEOPLE</text>
+  <text x="60" y="185" font-family="'Cairo', sans-serif" font-weight="500" font-size="18" fill="#8E9590">رحلة وثائقية للمنتجات الاستهلاكية والغذائية والصناعية</text>
+</svg>

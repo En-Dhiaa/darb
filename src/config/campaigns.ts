@@ -1,0 +1,729 @@
+export interface StoryboardStage {
+  step: string;
+  titleAr: string;
+  titleEn: string;
+  subtitleAr: string;
+  subtitleEn: string;
+  descAr: string;
+  descEn: string;
+  iconName: string;
+}
+
+export interface ProductFeatureModule {
+  id: string;
+  titleAr: string;
+  titleEn: string;
+  descAr: string;
+  descEn: string;
+  statusBadgeAr: string;
+  statusBadgeEn: string;
+}
+
+export interface DeliverableItem {
+  nameAr: string;
+  nameEn: string;
+  qtyEstimateAr: string;
+  qtyEstimateEn: string;
+  descAr: string;
+  descEn: string;
+}
+
+export interface CampaignConfig {
+  id: string;
+  slug: string;
+  titleAr: string;
+  titleEn: string;
+  subtitleAr: string;
+  subtitleEn: string;
+  industryAr: string;
+  industryEn: string;
+  targetPartnerAr: string;
+  targetPartnerEn: string;
+  heroImage: string;
+  secondaryImage: string;
+  proposalLabelAr: string;
+  proposalLabelEn: string;
+  shortDescAr: string;
+  shortDescEn: string;
+  fullDescAr: string;
+  fullDescEn: string;
+  coreIdeaAr: string;
+  coreIdeaEn: string;
+  threePillars: {
+    titleAr: string;
+    titleEn: string;
+    descAr: string;
+    descEn: string;
+  }[];
+  objectives: {
+    ar: string;
+    en: string;
+  }[];
+  storyboard: StoryboardStage[];
+  features?: ProductFeatureModule[];
+  deliverables: DeliverableItem[];
+  sponsorSupportRequests: {
+    categoryAr: string;
+    categoryEn: string;
+    itemsAr: string[];
+    itemsEn: string[];
+  }[];
+  sponsorValue: {
+    ar: string;
+    en: string;
+  }[];
+  safetyProtocols: {
+    titleAr: string;
+    titleEn: string;
+    descAr: string;
+    descEn: string;
+  }[];
+  partnerIntro?: {
+    headingAr: string;
+    headingEn: string;
+    bodyAr: string;
+    bodyEn: string;
+    officialWebsite: string;
+    websiteLabelAr: string;
+    websiteLabelEn: string;
+    disclaimerAr: string;
+    disclaimerEn: string;
+  };
+  vehicleConfig?: {
+    modelName: string;
+    powertrainNoteAr: string;
+    powertrainNoteEn: string;
+    specStatusNoticeAr: string;
+    specStatusNoticeEn: string;
+  };
+}
+
+export const campaignsData: Record<string, CampaignConfig> = {
+  "natco-jetour": {
+    id: "natco-jetour",
+    slug: "natco-jetour",
+    titleAr: "جيتور على الطريق",
+    titleEn: "JETOUR BEYOND THE ROAD",
+    subtitleAr: "رحلة استكشاف ميدانية مع ناتكو للسيارات",
+    subtitleEn: "A Proposed Brand Journey with NATCO Automotive",
+    industryAr: "قطاع السيارات والرحلات الميدانية",
+    industryEn: "Automotive & Field Expeditions",
+    targetPartnerAr: "ناتكو للسيارات (وكيل معتمد وموزع في اليمن)",
+    targetPartnerEn: "NATCO Automotive (Authorized Vehicle Distributor in Yemen)",
+    heroImage: "/images/jetour-proposal.svg",
+    secondaryImage: "/images/hero-expedition.svg",
+    proposalLabelAr: "تصور إبداعي مقترح — غير معتمد رسمياً بعد",
+    proposalLabelEn: "Proposed Creative Concept — Not an officially approved partnership",
+    shortDescAr: "تصور لحملة ميدانية تستكشف السيارة وتجربة استخدامها، وتعرّف الجمهور بشركة ناتكو ودورها في قطاع السيارات، من داخل المعرض إلى الطريق.",
+    shortDescEn: "A proposal for a field expedition testing the vehicle in real conditions while showcasing NATCO Automotive's showroom experience, heritage, and after-sales customer journey.",
+    fullDescAr: "تصور لحملة إعلامية ميدانية ترافق فيها جيتور فريق درب في رحلة لاكتشاف السيارة وتجربتها على الطرق المناسبة، مع توثيق تفاصيلها والتعريف بشركة ناتكو وتجربة العملاء وخدمات ما بعد البيع.",
+    fullDescEn: "A bespoke documentary field proposal where a JETOUR vehicle accompanies the DARB expedition team across safe, verified routes, capturing the driving experience, vehicle features, and NATCO's customer care in one cohesive visual narrative.",
+    coreIdeaAr: "نبدأ بالتعرف على السيارة والجهة التي توفرها، ثم ننتقل إلى الطريق لتوثيق تجربة الاستخدام، ونختم بقصص ومقابلات ومحتوى مرئي يعرّف الجمهور بالسيارة والشركة ضمن تجربة واحدة مترابطة.",
+    coreIdeaEn: "We begin by understanding the vehicle and the company providing it, transition to verified roads to document real-world driving, and conclude with storytelling interviews and premium visual assets connecting the car and company to the audience.",
+    threePillars: [
+      {
+        titleAr: "01. العلامة والشريك (THE BRAND)",
+        titleEn: "01. THE BRAND & PARTNER",
+        descAr: "التعرف على ناتكو للسيارات وتاريخها ودورها في خدمة السوق المحلي، وزيارة المعرض المعتمد لاستكشاف فلسفة خدمة العملاء.",
+        descEn: "Introducing NATCO Automotive, its presence in the local market, and exploring the official showroom customer experience.",
+      },
+      {
+        titleAr: "02. المركبة والتقنيات (THE VEHICLE)",
+        titleEn: "02. THE VEHICLE & ENGINEERING",
+        descAr: "استكشاف التصميم الخارجي والداخلي، وأنظمة مساعدة السائق، والراحة والعملية في الاستخدام اليومي والسفر.",
+        descEn: "Showcasing design, cabin ergonomics, driver-assist systems, and daily practical usability across varied driving conditions.",
+      },
+      {
+        titleAr: "03. الرحلة والتجربة (THE JOURNEY)",
+        titleEn: "03. THE FIELD JOURNEY",
+        descAr: "توثيق التجربة الميدانية الواقعية على مسارات آمنة ومختارة، ونقل المشاهد والمواقف والقصص بأسلوب وثائقي سينمائي.",
+        descEn: "Documenting the real-world road journey across scenic, tested routes, capturing cinematic storytelling with zero exaggerated claims.",
+      },
+    ],
+    objectives: [
+      {
+        ar: "التعريف بالطراز المختار من جيتور وتوضيح فئته ومواصفاته المعتمدة بدقة.",
+        en: "Introduce the selected JETOUR model, clarifying its official trim and market specifications.",
+      },
+      {
+        ar: "صناعة حضور بصري مستمر ومؤثر للمركبة على مسارات واقعية ومتنوعة.",
+        en: "Establish sustained, high-quality visual presence for the vehicle on authentic routes.",
+      },
+      {
+        ar: "شرح خصائص وتقنيات المركبة بطريقة عملية وسهلة الفهم للجمهور.",
+        en: "Explain key technological and safety features through practical demonstrations.",
+      },
+      {
+        ar: "التعريف بشركة ناتكو للسيارات والخدمات ومراكز الصيانة التي تقدمها.",
+        en: "Introduce NATCO Automotive, its service infrastructure, and customer care touchpoints.",
+      },
+      {
+        ar: "تقديم تجربة سفر وقيادة حقيقية خالية من المبالغات والتسويق المصطنع.",
+        en: "Present an authentic driving experience free from exaggerated claims or artificial hype.",
+      },
+      {
+        ar: "الإجابة عن تساؤلات الجمهور المباشرة حول الصيانة والضمان وتوفر الدعم.",
+        en: "Address prospective customer questions regarding maintenance, warranty, and official support.",
+      },
+      {
+        ar: "إنتاج مكتبة أصول بصرية وفيديوهات وثائقية قابلة لإعادة النشر في قنوات الشركة.",
+        en: "Produce reusable visual assets and documentary videos for agreed corporate marketing channels.",
+      },
+      {
+        ar: "توجيه المهتمين بالتواصل مع القنوات والمراكز المعتمدة للشركة.",
+        en: "Direct interested inquiries to NATCO's official showrooms and verified consultation channels.",
+      },
+    ],
+    storyboard: [
+      {
+        step: "01",
+        titleAr: "البداية من ناتكو",
+        titleEn: "THE INTRODUCTION",
+        subtitleAr: "زيارة المعرض والتعريف بالشريك",
+        subtitleEn: "Showroom Visit & Partner Introduction",
+        descAr: "زيارة تعريفية للتعرف على الشركة، وفريقها، والطراز المختار، وأهداف الحملة. تتضمن هذه المرحلة مقابلة أو تقديمًا موجزًا عن الشركة ودورها في قطاع السيارات.",
+        descEn: "An exploratory visit to NATCO's showroom to introduce the company, meet specialists, unveil the selected vehicle model, and align on journey objectives.",
+        iconName: "Building2",
+      },
+      {
+        step: "02",
+        titleAr: "التعرف على جيتور",
+        titleEn: "MEET THE VEHICLE",
+        subtitleAr: "استكشاف تفاصيل الطراز والتجهيزات",
+        subtitleEn: "Exterior, Cabin & System Walkthrough",
+        descAr: "استكشاف التصميم الخارجي والمقصورة والتجهيزات والأنظمة المتاحة في الطراز المحدد، باستخدام المعلومات الرسمية ومقابلة مختص عند الإمكان.",
+        descEn: "Exploring the exterior craftsmanship, interior comfort, infotainment, and driver safety suites using verified manufacturer data.",
+        iconName: "Car",
+      },
+      {
+        step: "03",
+        titleAr: "تجربة على الطريق",
+        titleEn: "THE ROAD TEST",
+        subtitleAr: "قيادة واقعية على مسار آمن ومناسب",
+        subtitleEn: "Controlled Real-World Driving Evaluation",
+        descAr: "توثيق تجربة القيادة على مسار مناسب وآمن، مع التركيز على الجوانب التي يمكن ملاحظتها أو قياسها فعليًا. تجرى جميع التجارب ضمن حدود الشركة المصنعة وشروط السلامة.",
+        descEn: "Documenting performance, road handling, cabin quietness, and suspension feel on verified public roads under strict adherence to safety limits.",
+        iconName: "Compass",
+      },
+      {
+        step: "04",
+        titleAr: "الطريق يكشف المزيد",
+        titleEn: "DISCOVER THE REGION",
+        subtitleAr: "تكامل المركبة مع المشهد والتضاريس",
+        subtitleEn: "Landscape Integration & Field Narrative",
+        descAr: "زيارة مواقع مختارة وتصوير السيارة ضمن البيئة المحيطة، وإبراز تجربة الرحلة والمناظر والطرق المناسبة، دون تعريض الأشخاص أو المركبة لمخاطر غير ضرورية.",
+        descEn: "Traveling through selected scenic locations, highlighting the aesthetic resonance of the car against striking mountain landscapes and highways.",
+        iconName: "Mountain",
+      },
+      {
+        step: "05",
+        titleAr: "الأسئلة التي تهم الجمهور",
+        titleEn: "PEOPLE & QUESTIONS",
+        subtitleAr: "حوارات حول الصيانة والضمان والخدمات",
+        subtitleEn: "After-Sales, Spare Parts & Ownership Q&A",
+        descAr: "لقاءات وحوارات حول الاستخدام والصيانة والضمان وتوفر قطع الغيار وخدمة ما بعد البيع، اعتمادًا على المعلومات الرسمية التي تقدمها الشركة.",
+        descEn: "Addressing key consumer considerations: maintenance schedules, warranty coverage, spare parts availability, and dealer support with official team input.",
+        iconName: "HelpCircle",
+      },
+      {
+        step: "06",
+        titleAr: "القصة التي تبقى",
+        titleEn: "THE FINAL FILM",
+        subtitleAr: "الفيلم الوثائقي والمحتوى الرقمي المتكامل",
+        subtitleEn: "Master Campaign Film & Reusable Media Assets",
+        descAr: "تجميع الرحلة في فيلم رئيسي ومجموعة مقاطع قصيرة وصور احترافية، وتسليم المواد المتفق عليها مع تقرير يوضح أداء المحتوى المنشور.",
+        descEn: "Synthesizing the journey into a premier cinematic documentary film, vertical short-form reels, high-res stills, and an analytics summary report.",
+        iconName: "Film",
+      },
+    ],
+    vehicleConfig: {
+      modelName: "طراز جيتور المعتمد (يحدد بالتنسيق مع ناتكو)",
+      powertrainNoteAr: "تضم جيتور طرازات تعمل بمحركات بنزين تقليدية أو منظومات هجينة متطورة (i-DM Plug-in Hybrid) أو كهربائية، ويتم توثيق المنظومة بدقة وفق الطراز الفعلي المعتمد محلياً.",
+      powertrainNoteEn: "JETOUR offers combustion engines, advanced i-DM plug-in hybrids, and electrified options. All specifications will precisely reflect the exact model provided for the campaign.",
+      specStatusNoticeAr: "مواصفات الطراز والقدرات الفنية تُحدد وتُعتمد بالتنسيق مع ناتكو للسيارات — لا نضع أرقاماً غير مؤكدة.",
+      specStatusNoticeEn: "Vehicle specifications and technical capabilities are finalized in coordination with NATCO Automotive — no unverified metrics are published.",
+    },
+    features: [
+      {
+        id: "exterior",
+        titleAr: "التصميم الخارجي والحضور البصري",
+        titleEn: "Exterior Design & Road Stance",
+        descAr: "دراسة الخطوط الهيكلية، لغة الإضاءة، العجلات، واللمسات الجمالية التي تعكس هوية جيتور المعاصرة في بيئة التصوير الميدانية.",
+        descEn: "Observing styling lines, lighting signatures, wheels, and aerodynamic proportions in documentary daylight.",
+        statusBadgeAr: "يُحدد وفق الطراز الفعلي",
+        statusBadgeEn: "Trim-Dependent Evaluation",
+      },
+      {
+        id: "cabin",
+        titleAr: "المقصورة وتجربة الراحة والركاب",
+        titleEn: "Cabin Ergonomics & Passenger Comfort",
+        descAr: "توثيق جودة المواد، مساحات الجلوس في المسافات الطويلة، عزل الضوضاء، وسهولة الوصول إلى أزرار وشاشات التحكم.",
+        descEn: "Reviewing materials, seat support during extended highway travel, sound dampening, and intuitive control layout.",
+        statusBadgeAr: "يُحدد وفق الطراز الفعلي",
+        statusBadgeEn: "Trim-Dependent Evaluation",
+      },
+      {
+        id: "assist",
+        titleAr: "أنظمة مساعدة السائق والأمان",
+        titleEn: "Driver-Assistance & Safety Systems",
+        descAr: "استعراض الأنظمة المتاحة رسميًا في الفئة المختارة مثل الكاميرات المحيطية، حساسات التوقف، وأنظمة التوازن أثناء القيادة.",
+        descEn: "Demonstrating verified active features such as 360-degree cameras, parking sensors, and stability control suites.",
+        statusBadgeAr: "وفق كتيب المواصفات الرسمي",
+        statusBadgeEn: "Per Manufacturer Spec Sheet",
+      },
+      {
+        id: "performance",
+        titleAr: "الأداء والاستجابة على الطرق المعبدة",
+        titleEn: "On-Road Performance & Handling",
+        descAr: "توثيق استجابة ناقل الحركة، مرونة التسارع الآمن، وثبات المركبة على المنعطفات والطرق السريعة ضمن السرعات النظامية.",
+        descEn: "Observing throttle response, transmission smoothness, and chassis stability under safe, regulated highway limits.",
+        statusBadgeAr: "اختبار ميداني منضبط",
+        statusBadgeEn: "Controlled Field Observation",
+      },
+      {
+        id: "practicality",
+        titleAr: "المساحات التخزينية والعملية اليومية",
+        titleEn: "Storage Space & Family Practicality",
+        descAr: "تجربة تحميل أمتعة السفر ومعدات التصوير، وتقييم مرونة طي المقاعد وحلول التخزين الذكية داخل المقصورة.",
+        descEn: "Evaluating luggage capacity with production gear, modular seat folding, and family-friendly storage compartments.",
+        statusBadgeAr: "تجربة واقعية بالأمتعة",
+        statusBadgeEn: "Real Baggage Loading Test",
+      },
+      {
+        id: "energy",
+        titleAr: "منظومة الطاقة والتزود بالوقود أو الشحن",
+        titleEn: "Energy Powertrain & Efficiency",
+        descAr: "شرح المنظومة المعتمدة سواء كانت بنزين تقليدي أو هجين قابل للشحن (i-DM PHEV)، وتوثيق محطات التزود وتوصيات الشركة.",
+        descEn: "Clarifying powertrain type (conventional ICE or plug-in hybrid i-DM) and documenting refueling or charging recommendations.",
+        statusBadgeAr: "اعتماد رسمي حسب المحرك",
+        statusBadgeEn: "Certified Powertrain Label",
+      },
+      {
+        id: "aftersales",
+        titleAr: "الملكية والصيانة وخدمات ما بعد البيع",
+        titleEn: "Ownership, Warranty & After-Sales",
+        descAr: "تسليط الضوء على شبكة مراكز ناتكو، جداول الصيانة الدورية، شروط الضمان المعتمد، وقنوات حجز المواعيد والاستفسارات.",
+        descEn: "Highlighting NATCO's service centers, scheduled maintenance transparency, warranty boundaries, and customer booking ease.",
+        statusBadgeAr: "بالتنسيق مع فريق ناتكو",
+        statusBadgeEn: "Verified with NATCO Team",
+      },
+    ],
+    partnerIntro: {
+      headingAr: "من يقف خلف التجربة؟",
+      headingEn: "Who Stands Behind The Experience?",
+      bodyAr: "تعمل ناتكو للسيارات في قطاع المركبات وخدماتها في اليمن. وتقترح حملة درب أن تتعرف الرحلة على الشركة من الداخل، وعلى تجربة العميل والخدمات المرتبطة بالسيارة، بما في ذلك المبيعات والصيانة والخدمات التي تؤكد الشركة توفرها.",
+      bodyEn: "NATCO Automotive operates in Yemen's automotive and mobility service sectors. The DARB campaign proposes to explore the company from the inside, presenting the genuine customer experience, showroom consulting, and confirmed after-sales service operations.",
+      officialWebsite: "https://www.natcoyemen.com/",
+      websiteLabelAr: "موقع ناتكو للسيارات الرسمي (للتحقق والاطلاع)",
+      websiteLabelEn: "Official NATCO Automotive Website (For Reference & Verification)",
+      disclaimerAr: "تنويه: الرابط أعلاه مخصص للاطلاع والتحقق المهني، ولا يعني وجود اتفاق مسبق أو موافقة منشورة من قبل الشركة.",
+      disclaimerEn: "Notice: The link above is provided for verification and research purposes only, and does not signify an executed contract or pre-approved endorsement.",
+    },
+    deliverables: [
+      {
+        nameAr: "الفيلم الوثائقي الرئيسي للرحلة",
+        nameEn: "Master Campaign Documentary Film",
+        qtyEstimateAr: "فيلم رئيسي بجودة سينمائية 4K (4-7 دقائق)",
+        qtyEstimateEn: "1 Master Film in 4K Cinematic Grade (4-7 mins)",
+        descAr: "سرد قصصي متكامل يجمع بين المعرض، تجربة القيادة، والمشاهد الطبيعية، مع تعليق صوتي وموسيقى تصويرية احترافية.",
+        descEn: "A complete narrative joining the showroom, road test, scenic horizons, sound design, and custom voiceover.",
+      },
+      {
+        nameAr: "حزمة مقاطع قصيرة عمودية (Reels / TikTok)",
+        nameEn: "Short-Form Vertical Video Package",
+        qtyEstimateAr: "5 إلى 8 مقاطع احترافية سريعة الإيقاع",
+        qtyEstimateEn: "5 to 8 Curated High-Paced Vertical Cuts",
+        descAr: "مقاطع مصممة للمنصات الرقمية تركز على مواقف محددة (المقصورة، التقنيات، استهلاك الوقود، وجماليات المركبة).",
+        descEn: "Optimized mobile reels focusing on distinct features: cockpit design, tech suite, safety, and scenic road moments.",
+      },
+      {
+        nameAr: "معرض صور تحريرية عالية الدقة",
+        nameEn: "High-Resolution Editorial Photo Library",
+        qtyEstimateAr: "30 إلى 50 صورة محررة ومجهزة للنشر",
+        qtyEstimateEn: "30 to 50 Master Color-Graded Stills",
+        descAr: "صور فوتوغرافية سينمائية تصلح للإعلانات المطبوعة، اللوحات، الكتيبات، وتغذية حسابات التواصل الرسمية للشريك.",
+        descEn: "Commercial-grade photography suitable for outdoor billboards, digital campaigns, catalogues, and press kits.",
+      },
+      {
+        nameAr: "مشاهد كواليس الرحلة (Behind The Scenes)",
+        nameEn: "Behind-The-Scenes Field Vignettes",
+        qtyEstimateAr: "2 إلى 3 مقاطع كواليس عفوية",
+        qtyEstimateEn: "2 to 3 BTS Field Vignettes",
+        descAr: "توثيق تفاعل فريق العمل مع المركبة أثناء التصوير، لتعزيز المصداقية والجانب الإنساني العفوي للحملة.",
+        descEn: "Authentic clips of the crew working on location, bolstering organic trust and transparent storytelling.",
+      },
+      {
+        nameAr: "مقابلة أو تغطية خاصة مع فريق ناتكو",
+        nameEn: "NATCO Specialist / Executive Feature",
+        qtyEstimateAr: "مقطع حواري مركّز (1-2 دقيقة)",
+        qtyEstimateEn: "1 Focused Interview Module (1-2 mins)",
+        descAr: "تسليط الضوء على كلمة ممثل الشركة حول فلسفة خدمة العملاء ومزايا الطراز وخدمات ما بعد البيع.",
+        descEn: "Spotlighting the company representative discussing customer care commitment, model highlights, and dealer warranty.",
+      },
+      {
+        nameAr: "تقرير أداء وتحليل التفاعل الرقمي",
+        nameEn: "Post-Campaign Analytics Summary",
+        qtyEstimateAr: "تقرير رقمي شامل بعد انتهاء النشر",
+        qtyEstimateEn: "1 Comprehensive Distribution Report",
+        descAr: "تقرير يلخص أرقام المشاهدات الفعلية ومعدلات التفاعل والتعليقات الواردة على المواد المنشورة على منصات درب.",
+        descEn: "Summary compiling verified view counts, audience engagement rates, and qualitative comment sentiment on DARB channels.",
+      },
+    ],
+    sponsorSupportRequests: [
+      {
+        categoryAr: "1. الدعم التشغيلي والمركبة (المسار الميداني)",
+        categoryEn: "1. Vehicle & Field Operational Provision",
+        itemsAr: [
+          "توفير سيارة جيتور من الطراز المتفق عليه طوال فترة التصوير المقررة.",
+          "تصريح كتابي باستخدام السيارة في التصوير الميداني وفق الإطار الزمني والمسارات الآمنة.",
+          "تغطية نفقات الوقود أو الشحن الخاصة بالرحلة وفق الاستهلاك الفعلي.",
+          "فحص فني شامل للمركبة قبل انطلاق الرحلة لضمان جاهزيتها وسلامتها.",
+        ],
+        itemsEn: [
+          "Provision of the agreed JETOUR vehicle for the scheduled production duration.",
+          "Written authorization for field filming across designated safe routes.",
+          "Coverage of actual fuel or charging expenses incurred during production.",
+          "Pre-journey technical inspection ensuring complete mechanical safety.",
+        ],
+      },
+      {
+        categoryAr: "2. الدعم الإعلامي والتنسيق المؤسسي",
+        categoryEn: "2. Institutional Access & Brand Guidelines",
+        itemsAr: [
+          "إتاحة التصوير داخل المعرض المعتمد أو مركز الصيانة بتنسيق مسبق.",
+          "تزويد الفريق بالمعلومات والكتيبات الفنية الرسمية الخاصة بالطراز المختار.",
+          "ترشيح ممثل رسمي أو مختص لإجراء المقابلة التعريفية.",
+          "تزويد الفريق بشعار الشركة الرسمي ودليل الهوية البصرية المعتمد.",
+          "تسمية منسق اتصال من طرف ناتكو لمتابعة الملاحظات واعتماد المواد قبل النشر.",
+        ],
+        itemsEn: [
+          "Coordinated access to film inside the authorized showroom or service facility.",
+          "Official technical brochures and feature documentation for the chosen model.",
+          "Nomination of a company specialist or representative for the introduction segment.",
+          "Supply of vector logos and official brand design guidelines.",
+          "Designation of a primary contact person for workflow coordination and approvals.",
+        ],
+      },
+      {
+        categoryAr: "3. دعم الإنتاج والرعاية المالية",
+        categoryEn: "3. Production Funding & Partnership Sponsorship",
+        itemsAr: [
+          "مساهمة مالية في تغطية تكاليف الإنتاج السينمائي والمعدات وإدارة الرحلة (تحدد بناءً على حجم الحزمة المتفق عليها).",
+          "تنسيق تراخيص التصوير الميداني في المناطق التي تتطلب إذناً من جهات الاختصاص عند الحاجة.",
+        ],
+        itemsEn: [
+          "Financial contribution toward cinematic equipment, travel crew logistics, and post-production (customized per agreed deliverable scope).",
+          "Assistance with official site filming permits where institutional support is beneficial.",
+        ],
+      },
+    ],
+    sponsorValue: [
+      {
+        ar: "سرد قصصي مترابط يبرز السيارة والشركة في تجربة بصرية واقعية وليست مجرد إعلان تجاري تقليدي.",
+        en: "A connected, authentic narrative showcasing the car and company in real context rather than a generic ad.",
+      },
+      {
+        ar: "حضور بصري متكرر لعلامة جيتور وناتكو طوال فترة إنتاج وبث مواد الرحلة.",
+        en: "Repeated, premium brand visibility for JETOUR and NATCO throughout the production and publishing run.",
+      },
+      {
+        ar: "توضيح مواصفات السيارة والخدمات بطريقة مبسطة تجيب عن الأسئلة الواقعية للمستهلك.",
+        en: "Clear, relatable demonstration of vehicle features answering real consumer purchase inquiries.",
+      },
+      {
+        ar: "امتلاك مكتبة من الصور والفيديوهات الاحترافية عالية الجودة لإعادة استخدامها في حملات الشركة.",
+        en: "Acquisition of an exclusive, high-grade visual asset library for the company's internal and external marketing.",
+      },
+      {
+        ar: "إبراز موثوقية مراكز الخدمة وخدمات ما بعد البيع لتعزيز ثقة العميل بالشراء من الوكيل المعتمد.",
+        en: "Highlighting service center reliability to strengthen consumer confidence in authorized dealership channels.",
+      },
+      {
+        ar: "تقرير شفاف بالأداء والتفاعل يوضح مدى تفاعل الجمهور مع مواد الحملة.",
+        en: "Transparent post-campaign analytics report tracking genuine viewer engagement and reach.",
+      },
+      {
+        ar: "تأسيس شراكة استراتيجية قابلة للتطور إلى برامج رحلات سنوية أو موسمية متجددة.",
+        en: "Establishing a strategic relationship that can expand into recurring seasonal or annual brand journeys.",
+      },
+    ],
+    safetyProtocols: [
+      {
+        titleAr: "اختيار المسارات الآمنة والمعتمدة",
+        titleEn: "Scouted & Verified Safe Routes",
+        descAr: "تحديد مسارات السير مسبقاً وتجنب الطرق الوعرة أو غير المجهزة التي قد تسبب ضرراً للمركبة أو تعرض الطاقم للخطر.",
+        descEn: "Pre-scouting all corridors to ensure paved, verified conditions avoiding hazardous terrain that could compromise vehicle or crew.",
+      },
+      {
+        titleAr: "القيادة المهنية والالتزام بالأنظمة",
+        titleEn: "Professional Driving & Traffic Compliance",
+        descAr: "يتولى القيادة سائق ذو خبرة، مع الالتزام التام بقوانين السير وحدود السرعة دون أي قيادة استعراضية أو متهورة.",
+        descEn: "All driving is conducted by an experienced journey lead under full adherence to speed regulations with zero stunt driving.",
+      },
+      {
+        titleAr: "فحص المركبة والتأمين والمسؤوليات",
+        titleEn: "Vehicle Inspection & Liability Insurance",
+        descAr: "فحص المركبة وتوثيق حالتها قبل الانطلاق، وضمان وجود تغطية تأمينية سارية واتفاق كتابي يحدد مسؤوليات كل طرف بوضوح.",
+        descEn: "Documented condition inspection prior to departure, alongside comprehensive insurance and clear contractual responsibilities.",
+      },
+      {
+        titleAr: "تراخيص التصوير وموافقة الأشخاص",
+        titleEn: "Filming Clearances & Individual Consent",
+        descAr: "الحصول على التراخيص المطلوبة للتصوير الخارجي، وأخذ موافقة صريحة من جميع المشاركين والمقابلين قبل بث المواد.",
+        descEn: "Securing required administrative filming approvals and documented consent from all interviewees before publication.",
+      },
+      {
+        titleAr: "خطط الطوارئ والظروف المناخية",
+        titleEn: "Weather & Emergency Contingencies",
+        descAr: "وجود خطة بديلة للتعامل مع تقلبات الطقس أو إغلاق الطرق، مع الاحتفاظ بجهة اتصال مباشرة مع الشريك للمتابعة اللحظية.",
+        descEn: "Structured backup plans for adverse weather or unexpected road closures, maintaining active liaison with the partner contact.",
+      },
+    ],
+  },
+  "from-factory-to-people": {
+    id: "from-factory-to-people",
+    slug: "from-factory-to-people",
+    titleAr: "من المصنع إلى الناس",
+    titleEn: "FROM FACTORY TO PEOPLE",
+    subtitleAr: "رحلة وثائقية تتبع قصة المنتج من بيئة العمل إلى أيدي المستهلكين",
+    subtitleEn: "A Documentary Journey Following the Product from Assembly to the Consumer",
+    industryAr: "الصناعات التحويلية، السلع الاستهلاكية، الأغذية، وسلاسل التوريد",
+    industryEn: "Manufacturing, FMCG, Food & Beverage, Distribution & Retail",
+    targetPartnerAr: "الشركات الصناعية والإنتاجية وموزعو السلع الاستهلاكية",
+    targetPartnerEn: "Industrial Manufacturers, Food Companies & Consumer Brands",
+    heroImage: "/images/factory-journey.svg",
+    secondaryImage: "/images/hero-expedition.svg",
+    proposalLabelAr: "تصور إبداعي مقترح — مفتوح للرعاية والشراكة",
+    proposalLabelEn: "Proposed Creative Concept — Open for Corporate Sponsorship",
+    shortDescAr: "رحلة وثائقية تتبع قصة المنتج من بيئة العمل والإنتاج إلى التوزيع والمتاجر وتجربة المستهلك.",
+    shortDescEn: "A documentary narrative following a product's lifecycle: from raw ingredients and manufacturing lines to retail shelves and the daily lives of consumers.",
+    fullDescAr: "نخرج من خلف الكواليس إلى الأسواق، لنتعرف على الأشخاص والعمليات والتجارب التي تقف وراء المنتج، ونحولها إلى قصة مرئية متكاملة.",
+    fullDescEn: "Stepping beyond closed factory gates into the open market to uncover the craft, dedicated workforce, and everyday moments behind the product, turning operations into compelling corporate cinema.",
+    coreIdeaAr: "كل منتج يملأ حياتنا وراءه جهد بشري، ودقة تشغيلية، وتحديات توزيع يومية. هذه الحملة تسلط الضوء على هذا المسار الخفي لتحويل المنتج من سلعة على الرف إلى قصة يقدرها المستهلك.",
+    coreIdeaEn: "Behind every consumer staple lies human craftsmanship, operational rigor, and logistical persistence. This campaign illuminates that unseen journey, transforming commodities on shelves into revered brand stories.",
+    threePillars: [
+      {
+        titleAr: "01. البيئة والكوادر (THE INSIDE)",
+        titleEn: "01. THE WORKFORCE & WORKPLACE",
+        descAr: "زيارة مرافق الإنتاج المعتمدة والتعرف على المشرفين والفنيين الذين يصنعون الفارق اليومي داخل المنشأة.",
+        descEn: "Touring authorized facilities to meet supervisors, technicians, and craftspeople driving everyday operational quality.",
+      },
+      {
+        titleAr: "02. المسار وسلسلة الإمداد (THE LOGISTICS)",
+        titleEn: "02. THE LOGISTICAL JOURNEY",
+        descAr: "مرافقة شحنة المنتج عبر أسطول التوزيع أو مسارات النقل إلى مراكز البيع والتجزئة بمختلف المحافظات.",
+        descEn: "Accompanying distribution convoys as products travel from central depots across regional retail networks.",
+      },
+      {
+        titleAr: "03. الناس وتجربة الاستخدام (THE PEOPLE)",
+        titleEn: "03. CONSUMER CONNECTIONS",
+        descAr: "توثيق اللحظة التي يصل فيها المنتج إلى أيدي المستهلكين، ولقاء أصحاب المتاجر والعائلات وتوثيق انطباعاتهم الواقعية.",
+        descEn: "Capturing authentic interactions at corner grocery stores, family kitchens, and everyday retail touchpoints with full consent.",
+      },
+    ],
+    objectives: [
+      {
+        ar: "إبراز جودة التصنيع والجهد المبذول في بيئة الإنتاج المحلية.",
+        en: "Highlight local manufacturing standards and operational care invested in production.",
+      },
+      {
+        ar: "إظهار الكوادر العاملة والجانب الإنساني الذي يعزز ولاء المستهلك.",
+        en: "Showcase the dedicated workforce, humanizing the brand to build authentic consumer loyalty.",
+      },
+      {
+        ar: "توثيق اتساع شبكة التوزيع والوصول إلى مختلف المناطق والمدن.",
+        en: "Document the breadth of logistical reach connecting central facilities to distant markets.",
+      },
+      {
+        ar: "صناعة محتوى مرئي غير نمطي يناسب المنصات الرقمية وحملات العلاقات العامة.",
+        en: "Produce non-generic documentary media tailored for corporate PR and digital storytelling.",
+      },
+      {
+        ar: "توضيح شروط السلامة والتغليف وحماية المستهلك المتبعة رسمياً.",
+        en: "Illustrate official hygiene, packaging, and safety practices observed by the facility.",
+      },
+    ],
+    storyboard: [
+      {
+        step: "01",
+        titleAr: "داخل المنشأة والبدايات",
+        titleEn: "INSIDE THE COMPANY",
+        subtitleAr: "التعرف على المؤسسة وفلسفة الإنتاج",
+        subtitleEn: "Corporate Heritage & Facility Orientation",
+        descAr: "لقاء إدارة المنشأة وفهم رؤيتها، واختيار خط الإنتاج أو المنتج الذي ستتبعه الحملة في رحلتها القادمة.",
+        descEn: "Meeting facility leadership to understand foundational vision and select the product line featured in the narrative.",
+        iconName: "Building",
+      },
+      {
+        step: "02",
+        titleAr: "صنّاع المنتج والأيدي العاملة",
+        titleEn: "THE PEOPLE & CRAFTSMEN",
+        subtitleAr: "حوارات ملهمة مع فنيي ومسؤولي الجودة",
+        subtitleEn: "Operators, Quality Inspectors & Field Leads",
+        descAr: "الالتقاء بالعاملين والمهندسين بتنسيق مسبق، وتوثيق خبراتهم والحرص اليومي الذي يضمن جودة كل قطعة تخرج للمستهلك.",
+        descEn: "Interviewing authorized engineers and front-line operators, documenting their dedication to precision and consistency.",
+        iconName: "Users",
+      },
+      {
+        step: "03",
+        titleAr: "دورة التصنيع المعتمدة",
+        titleEn: "THE PRODUCTION PROCESS",
+        subtitleAr: "توثيق الخطوات المسموح تصويرها بدقة",
+        subtitleEn: "Approved Manufacturing & Hygiene Safeguards",
+        descAr: "توثيق مراحل الإنتاج والتعبئة والتغليف المعتمدة للنشر، مع الالتزام الصارم بعدم إفشاء أي أسرار تصنيعية أو تقنية خاصة.",
+        descEn: "Documenting authorized manufacturing and packaging phases under strict confidentiality protocols protecting proprietary methods.",
+        iconName: "Cog",
+      },
+      {
+        step: "04",
+        titleAr: "مسار التوزيع وانطلاق الشحنة",
+        titleEn: "THE LOGISTICS & TRANSIT",
+        subtitleAr: "مرافقة شاحنات التوزيع إلى الأسواق",
+        subtitleEn: "Fleet Operations & Regional Distribution",
+        descAr: "مرافقة فرق التوزيع على الطرق المعتمدة، وتوثيق وصول المنتجات إلى المستودعات الإقليمية ومتاجر التجزئة ومنافذ البيع.",
+        descEn: "Following distribution vehicles onto highway routes, observing delivery at regional depots and neighborhood retail points.",
+        iconName: "Compass",
+      },
+      {
+        step: "05",
+        titleAr: "المنتج في يد الناس",
+        titleEn: "THE CONSUMER & STORE OWNER",
+        subtitleAr: "انطباعات حقيقية ومواقف تسوق واقعية",
+        subtitleEn: "Storekeeper Feedback & Consumer Moments",
+        descAr: "إجراء مقابلات سريعة بموافقة تامة مع تجار التجزئة والمشترين، وتوثيق مكانة المنتج في تفاصيل يومهم واحتياجاتهم.",
+        descEn: "Conducting consent-based discussions with grocers and shoppers, recording genuine utility and brand appreciation.",
+        iconName: "ShoppingBag",
+      },
+      {
+        step: "06",
+        titleAr: "القصة المكتملة",
+        titleEn: "THE MASTER STORY",
+        subtitleAr: "تسليم الفيلم الوثائقي والحملة الرقمية",
+        subtitleEn: "Final Documentary Deliverables & Analytics",
+        descAr: "إخراج فيلم وثائقي رئيسي ومجموعة مقاطع قصيرة ومنشورات صورية توثق رحلة المنتج الكاملة، مع تقرير تفاعل رقمي.",
+        descEn: "Delivering the core documentary film, vertical social highlights, and high-resolution photo essay with full analytics reporting.",
+        iconName: "CheckCircle",
+      },
+    ],
+    deliverables: [
+      {
+        nameAr: "الفيلم الوثائقي (من المصنع إلى الناس)",
+        nameEn: "Main Documentary Showcase Film",
+        qtyEstimateAr: "فيلم رئيسي وثائقي (5-8 دقائق)",
+        qtyEstimateEn: "1 Master Film (5-8 mins)",
+        descAr: "عمل وثائقي متكامل يحكي مسيرة المنتج من المواد الأولى والتصنيع حتى مائدة المستهلك أو رف المتجر.",
+        descEn: "A cinematic documentary weaving factory craftsmanship, logistics transit, and customer moments.",
+      },
+      {
+        nameAr: "سلسلة مقاطع رأسية لقصص العاملين والعمليات",
+        nameEn: "Vertical Stories: People & Processes",
+        qtyEstimateAr: "6 إلى 10 مقاطع قصيرة مخصصة للسوشيال ميديا",
+        qtyEstimateEn: "6 to 10 Focused Vertical Micro-Stories",
+        descAr: "مقاطع تسلط الضوء على شخصيات حقيقية من خطوط الإنتاج والتوزيع واختبارات الجودة.",
+        descEn: "Shorts highlighting real operators, quality checks, packaging rhythm, and delivery drivers.",
+      },
+      {
+        nameAr: "ألبوم صور فوتوغرافية وثائقية للمنشأة والمسار",
+        nameEn: "Documentary Facility & Retail Photo Album",
+        qtyEstimateAr: "40 إلى 60 صورة فوتوغرافية احترافية",
+        qtyEstimateEn: "40 to 60 Commercial Editorial Stills",
+        descAr: "صور تركز على الآلات، الأيدي العاملة، الشاحنات، والمستهلكين لاستخدامها في تقارير الاستدامة والحسابات المؤسسية.",
+        descEn: "High-standard photography covering machinery, workforce portraits, distribution transit, and market stalls.",
+      },
+      {
+        nameAr: "ملخص رقمي لأثر وتفاعل الحملة",
+        nameEn: "Digital Reach & Sentiment Report",
+        qtyEstimateAr: "تقرير رقمي مفصل",
+        qtyEstimateEn: "1 Verified Campaign Sentiment Report",
+        descAr: "رصد أداء المواد المنشورة على قنوات درب وتفاعل الجمهور الإيجابي مع قصة المنتج المصنع محلياً.",
+        descEn: "Compiling verified viewer feedback, comments celebrating local industry, and engagement data.",
+      },
+    ],
+    sponsorSupportRequests: [
+      {
+        categoryAr: "1. إتاحة المرافق والزيارات الميدانية",
+        categoryEn: "1. Facility Clearances & Site Access",
+        itemsAr: [
+          "السماح لفريق التصوير بزيارة خطوط الإنتاج المحددة وتصوير العمليات المتفق عليها.",
+          "تنسيق إجراءات السلامة والصحة المهنية وتزويد الفريق بمعدات الوقاية المطلوبة داخل المصنع.",
+          "تسمية مسؤول جودة أو مرافق خلال ساعات التصوير داخل المنشأة.",
+        ],
+        itemsEn: [
+          "Permission for the production crew to access designated production areas.",
+          "Coordination of safety gear (helmets, coats, sanitization) per facility regulations.",
+          "Designation of an escort or quality manager during factory shooting hours.",
+        ],
+      },
+      {
+        categoryAr: "2. دعم اللوجستيات والمنافذ التجارية",
+        categoryEn: "2. Distribution & Retail Coordination",
+        itemsAr: [
+          "تنسيق مرافقة إحدى شاحنات التوزيع أو نقاط التفريغ في الأسواق.",
+          "تسهيل التواصل مع بعض المتاجر أو الموزعين المعتمدين لتصوير وصول المنتج.",
+          "توفير عينات من المنتج لتوثيق تفاصيل التغليف والتصميم بجودة عالية.",
+        ],
+        itemsEn: [
+          "Coordination to accompany a scheduled distribution vehicle on its delivery route.",
+          "Facilitating introductions with approved grocers or retail branches for arrival filming.",
+          "Providing pristine product samples for macro studio and on-site product photography.",
+        ],
+      },
+      {
+        categoryAr: "3. دعم الإنتاج والرعاية",
+        categoryEn: "3. Production Funding & Media Agreement",
+        itemsAr: [
+          "مساهمة مالية لتغطية مراحل التصوير والإخراج والمونتاج وتوزيع المحتوى (وفق نطاق الحزمة المختارة).",
+          "توفير شعارات الشركة الرسمية وملفات الهوية البصرية بدقة عالية.",
+        ],
+        itemsEn: [
+          "Financial contribution toward filming crew, equipment, editing, color grading, and broadcast.",
+          "Providing official vector assets and approved corporate brand guidelines.",
+        ],
+      },
+    ],
+    sponsorValue: [
+      {
+        ar: "تحويل المنتج الاستهلاكي من مجرد سلعة تجارية إلى قصة ذات قيمة إنسانية وصناعية يفتخر بها المستهلك.",
+        en: "Transforming the product from a shelf commodity into an inspiring story of local pride and dedication.",
+      },
+      {
+        ar: "بناء ثقة عميقة بالشفافية وجودة المعايير المتبعة داخل خطوط الإنتاج والتعبئة.",
+        en: "Cultivating consumer trust through transparent depiction of hygiene, safety, and rigorous packaging standards.",
+      },
+      {
+        ar: "إبراز دور الشركة في دعم الاقتصاد المحلي وتشغيل الكفاءات وتوفير المنتجات الأساسية.",
+        en: "Highlighting the enterprise's broader social role in job creation and national economic supply stability.",
+      },
+      {
+        ar: "امتلاك أصول بصرية ثرية قابلة للاستخدام في التقارير السنوية والمعارض والموقع الإلكتروني للشركة.",
+        en: "Securing an enduring media archive for annual reports, investor briefs, websites, and future marketing campaigns.",
+      },
+    ],
+    safetyProtocols: [
+      {
+        titleAr: "الامتثال التام لإجراءات السلامة الصناعية",
+        titleEn: "Industrial Safety Compliance",
+        descAr: "ارتداء مهمات الوقاية الشخصية داخل المصنع (سترات، خوذ، أحذية أمان، أغطية رأس) والالتزام بمسارات المشاة المحددة.",
+        descEn: "Strict adherence to PPE mandates (helmets, safety shoes, sanitization nets) and staying strictly within marked safety lanes.",
+      },
+      {
+        titleAr: "حماية الأسرار التشغيلية والتجارية",
+        titleEn: "Operational Confidentiality Safeguards",
+        descAr: "عدم تصوير أي أجهزة أو معادلات أو سجلات حساسة، ومراجعة المواد المسجلة مع إدارة المصنع قبل النشر.",
+        descEn: "Zero recording of proprietary formulations or sensitive machinery without prior explicit authorization and review.",
+      },
+      {
+        titleAr: "سلامة حركة الشاحنات والنقل الميداني",
+        titleEn: "Fleet Safety & Route Monitoring",
+        descAr: "التصوير الميداني بجانب مركبات النقل دون إعاقة عمل السائقين أو خلق أي مخاطر على الطرق العامة.",
+        descEn: "Filming logistics transit without disrupting driver focus, loading operations, or normal roadway traffic.",
+      },
+      {
+        titleAr: "الموافقة المسبقة للمشاركين في المقابلات",
+        titleEn: "Documented Participant Consents",
+        descAr: "الحصول على موافقة خطية أو مسجلة من جميع الموظفين والتجار والمستهلكين الذين يظهرون في الفيلم.",
+        descEn: "Documenting affirmative consent from all workforce members, grocers, and customers appearing on camera.",
+      },
+    ],
+  },
+};

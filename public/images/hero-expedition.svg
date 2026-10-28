@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A1F23"/>
+      <stop offset="40%" stop-color="#101315"/>
+      <stop offset="100%" stop-color="#090B0C"/>
+    </linearGradient>
+    <radialGradient id="skyGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#C8B99D" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#535B48" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#101315" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#heroBg)"/>
+  <rect width="1600" height="900" fill="url(#skyGlow)"/>
+
+  <!-- Dramatic Mountain Ridgelines (Yemeni Highlands Theme) -->
+  <polygon points="0,550 250,420 480,500 750,340 1020,480 1320,290 1600,430 1600,900 0,900" fill="#14181B" opacity="0.85"/>
+  <polygon points="0,620 180,520 420,580 680,440 940,560 1200,410 1450,510 1600,480 1600,900 0,900" fill="#0E1113"/>
+
+  <!-- Winding Mountain Highway Line -->
+  <path d="M-100,900 C300,850 650,780 820,700 C980,620 1250,600 1600,580" stroke="#C8B99D" stroke-width="4" stroke-opacity="0.3" fill="none"/>
+  <path d="M-100,910 C300,860 650,790 820,710 C980,630 1250,610 1600,590" stroke="#F5F3EE" stroke-width="1.5" stroke-dasharray="16 16" stroke-opacity="0.5" fill="none"/>
+
+  <!-- Compass Needle Emblem in Sky -->
+  <g transform="translate(1380, 140)" opacity="0.3">
+    <circle cx="60" cy="60" r="55" stroke="#C8B99D" stroke-width="1.5" fill="none"/>
+    <circle cx="60" cy="60" r="48" stroke="#C8B99D" stroke-width="0.8" stroke-dasharray="4 4" fill="none"/>
+    <polygon points="60,15 67,60 60,55 53,60" fill="#C8B99D"/>
+    <polygon points="60,105 67,60 60,65 53,60" fill="#8E9590"/>
+  </g>
+</svg>
