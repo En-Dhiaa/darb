@@ -140,3 +140,4 @@ export const siteConfig: SiteConfig = {
     pricingNoticeEn: "No fixed prices published. All financial terms and sponsorship packages are discussed privately and tailored to each project scope.",
   },
 };
+

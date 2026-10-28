@@ -99,3 +99,4 @@ export function CampaignCard({ campaign }: CampaignCardProps) {
     </article>
   );
 }
+

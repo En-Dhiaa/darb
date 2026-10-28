@@ -87,3 +87,4 @@ export function StoryboardTimeline({ stages }: StoryboardTimelineProps) {
     </div>
   );
 }
+

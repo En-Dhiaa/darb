@@ -324,3 +324,4 @@ export const translations: Record<Language, TranslationDictionary> = {
     },
   },
 };
+

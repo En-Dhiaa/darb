@@ -356,3 +356,4 @@ export default function FromFactoryToPeoplePage() {
     </div>
   );
 }
+

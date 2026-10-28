@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { useLanguage } from "@/components/layout/LanguageContext";
 import { campaignsData } from "@/config/campaigns";
 import { CampaignCard } from "@/components/campaigns/CampaignCard";
@@ -109,13 +110,14 @@ export default function CampaignsDirectoryPage() {
           </p>
         </div>
 
-        <a
+        <Link
           href="/contact"
           className="whitespace-nowrap px-6 py-3 rounded-lg bg-sand text-charcoal-950 font-bold text-xs hover:bg-sand-light transition-all shadow-card flex-shrink-0"
         >
           {t.common.requestProposal}
-        </a>
+        </Link>
       </div>
     </div>
   );
 }
+
